@@ -1,9 +1,5 @@
 <template>
-   <ul v-if="heroes && heroes.lenth">
-      <li v-for="hero in heroes">
-          <p>{{hero.name}}</p>
-      </li>
-   </ul>
+    <h1>hello</h1>
 </template>
 
 <script>
@@ -23,7 +19,11 @@ export default {
       axios.get('https://api.opendota.com/api/heroes')
         .then(response => {
             this.heroes = response.data
-            console.log(this.heroes)
+            // console.log(this.heroes)
+
+            for(var hero in response.data){
+                console.log(hero.localized_name)
+            }
         })
         .catch(e => {
             this.errors.push(e)
