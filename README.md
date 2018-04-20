@@ -13,7 +13,8 @@ belajar vue js dengan Nuxt.js
 
 ## Build Setup
 
-``` bash
+```
+bash
 # install dependencies
 $ yarn install
 
