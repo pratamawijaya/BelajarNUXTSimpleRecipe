@@ -1,30 +1,15 @@
 <template>
-    <v-app light>
-        <v-toolbar app>
-            <v-toolbar-side-icon></v-toolbar-side-icon>
-            <v-toolbar-title>Dota Heroes</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-btn icon>
-                <v-icon>search</v-icon>
-            </v-btn>
-        </v-toolbar>
-        <v-content>
-            <v-container fluid>
-                <ul v-if="heroes && heroes.length">
-                    <section class="heroes">
-                        <Hero
-                            v-for="hero in heroes"
-                            :key="hero.id"
-                            :img="hero.url_full_portrait"
-                            :name="hero.localized_name"
-                            :id="hero.id"
-                        />
-                    </section>
-                </ul>   
-            </v-container>
-        </v-content>
-        
-    </v-app>
+    <ul v-if="heroes && heroes.length">
+        <section class="heroes">
+            <Hero
+                v-for="hero in heroes"
+                :key="hero.id"
+                :img="hero.url_full_portrait"
+                :name="hero.localized_name"
+                :id="hero.id"
+            />
+        </section>
+    </ul>
 </template>
 
 <script>

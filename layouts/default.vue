@@ -1,7 +1,21 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+  <v-app light>
+     <v-toolbar app>
+        <v-toolbar-side-icon></v-toolbar-side-icon>
+        <v-toolbar-title>My Vue App</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn icon>
+            <v-icon>search</v-icon>
+        </v-btn>
+      </v-toolbar>
+    <main>
+      <v-content>
+        <v-container fluid>
+          <nuxt/>
+        </v-container>
+      </v-content>
+    </main>
+  </v-app>
 </template>
 
 <style>

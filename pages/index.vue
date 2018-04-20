@@ -9,8 +9,12 @@
         My wonderful Nuxt.js project
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+          <nuxt-link to="/heroes">
+           <v-btn> Dota Heroes</v-btn>
+          </nuxt-link>
+          <nuxt-link to="/recipes">
+            <v-btn> Recipes </v-btn>
+          </nuxt-link>
       </div>
     </div>
   </section>
@@ -56,4 +60,8 @@ export default {
 {
   padding-top: 15px;
 }
+a{
+    text-decoration: none;
+    color: black;
+  }
 </style>
