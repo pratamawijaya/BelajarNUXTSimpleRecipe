@@ -33,6 +33,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/vuetify.js'
   ],
 
   /*
@@ -45,6 +46,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['vuetify'],
     /*
     ** You can extend webpack config here
     */

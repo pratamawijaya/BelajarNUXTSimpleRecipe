@@ -1,15 +1,22 @@
 <template>
-    <ul v-if="heroes && heroes.length">
-        <section class="heroes">
-            <Hero
-                v-for="hero in heroes"
-                :key="hero.id"
-                :img="hero.url_full_portrait"
-                :name="hero.localized_name"
-                :id="hero.id"
-            />
-        </section>
-    </ul>
+    <v-app>
+        <v-content>
+            <v-container>
+                <ul v-if="heroes && heroes.length">
+                    <section class="heroes">
+                        <Hero
+                            v-for="hero in heroes"
+                            :key="hero.id"
+                            :img="hero.url_full_portrait"
+                            :name="hero.localized_name"
+                            :id="hero.id"
+                        />
+                    </section>
+                </ul>   
+            </v-container>
+        </v-content>
+        
+    </v-app>
 </template>
 
 <script>
