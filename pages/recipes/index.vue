@@ -1,25 +1,13 @@
 <template>
     <section class="recipes">
-            <Recipe
-                id = "1"
-                title = "judul enak"
-                thumbnail = "https://images.summitmedia-digital.com/yummyph/images/2016/08/05/salted-eggs-main2.jpg"
-                previewText = "desc enak"
-            />
-
-            <Recipe
-                id = "2"
-                title = "judul enak"
-                thumbnail = "https://images.summitmedia-digital.com/yummyph/images/2016/08/05/salted-eggs-main2.jpg"
-                previewText = "desc enak"
-            />
-
-            <Recipe
-                id = "3"
-                title = "judul enak"
-                thumbnail = "https://images.summitmedia-digital.com/yummyph/images/2016/08/05/salted-eggs-main2.jpg"
-                previewText = "desc enak"
-            />
+        <Recipe
+            v-for="recipe in recipes"
+            :key="recipe.id"
+            :thumbnail="recipe.thumbnail"
+            :title="recipe.title"
+            :previewText="recipe.previewText"
+            :id="recipe.id"
+        />
     </section>
 </template>
 
