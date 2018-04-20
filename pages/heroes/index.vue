@@ -19,20 +19,18 @@ export default {
     components : {
         Hero
     },
-    data () {
-        return {
-            heroes : [],
-            errors : []
-        }
-    },
-    created() {
-        axios.get('https://raw.githubusercontent.com/joshuaduffy/dota2api/master/dota2api/ref/heroes.json')
-            .then(response => {
-                this.heroes = response.data.heroes
-            })
-            .catch(e => {
-                this.errors.push(e)
-            })
+    asyncData(){
+        return axios.get('https://raw.githubusercontent.com/joshuaduffy/dota2api/master/dota2api/ref/heroes.json')
+        .then((res) => {
+            return {
+                heroes : res.data.heroes
+            }
+        })
+        .catch(e => {
+            return {
+                error: e
+            }
+        })
     }
 }
 </script>
