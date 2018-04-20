@@ -1,7 +1,7 @@
 <template>
   <hero class="hero">
       <div class="hero-img" :style="{backgroundImage: 'url('+ img +')'}"></div>
-      <h1>hero name</h1>
+      <h1>{{ name }}</h1>
   </hero>
 </template>
 
