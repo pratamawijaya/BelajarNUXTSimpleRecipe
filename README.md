@@ -2,6 +2,15 @@
 
 > My wonderful Nuxt.js project
 
+```
+belajar vue js dengan Nuxt.js
+```
+
+## Feature
+```
+- localhost:3000/heroes
+-- menampilkan data heroes dota dari api menggunakan axios
+
 ## Build Setup
 
 ``` bash
